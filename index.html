@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Form validation: Task 1</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="app.js" defer></script>
+    <style>
+      body {
+        background-color: #fff;
+        color: #333;
+        font: 1em / 1.4 Helvetica Neue, Helvetica, Arial, sans-serif;
+        padding: 1em;
+        margin: 0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+
+  <body>
+    <form>
+      <h2>Enter your support query</h2>
+      <ul>
+        <li>
+          <label for="uname">User name:</label>
+          <input type="text" name="uname" id="uname" required minlength="4" />
+          <span class="error" aria-live="polite"></span>
+        </li>
+        <li>
+          <label for="email">Email address:</label>
+          <input type="text" name="email" id="email" required minlength="6" />
+          <span class="error" aria-live="polite"></span>
+        </li>
+        <li>
+          <label for="phone">Phone number:</label>
+          <input type="text" name="phone" id="phone" required minlength="10" />
+          <span class="error" aria-live="polite"></span>
+        </li>
+        <li>
+          <label for="comment">Comment:</label>
+          <textarea
+            name="comment"
+            id="comment"
+            required
+            minlength="25"
+          ></textarea>
+          <span class="error" aria-live="polite"></span>
+        </li>
+        <li>
+          <button>Submit comment</button>
+        </li>
+      </ul>
+    </form>
+  </body>
+</html>
